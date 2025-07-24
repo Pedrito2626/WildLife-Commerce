@@ -115,3 +115,75 @@ Based on the findings, the following recommendations are proposed to strengthen 
 - Critical Corridors: Strengthen international cooperation and control capabilities in identified trade corridors (e.g., Europe-Asia, Africa-Europe, Americas-Europe), which represent significant flows and points of high concentration.
 
 - Region-Specific Policies: Design CITES compliance policies and programs tailored to the specific characteristics of each region, acknowledging different export and import dynamics (e.g., Africa as a frequency exporter, Asia as a volume importer).
+  
+## 7. Project Structure
+```
+├── data/
+│   ├── processed/
+│   │   └── trafico_fauna_limpio.csv  # Cleaned and processed data
+│   └── raw/
+│       └── Vert_CITES_2000_2021.csv  # Original raw data
+├── notebooks/
+│   ├── 01_EDA.ipynb               # Initial Exploratory Data Analysis & Data Cleaning
+│   └── 02_Graphics.ipynb          # Advanced Analysis, Visualizations & Dashboard Generation
+├── .gitattributes
+├── README.md                      # Project README file
+└── requirements.txt               # Python dependencies
+```
+## 8. Technical Stack
+Python 3.11.5
+
+### Key Libraries:
+
+- pandas: For data manipulation and analysis.
+
+- numpy: For numerical operations.
+
+- matplotlib: For static data visualization.
+
+- seaborn: For enhanced statistical data visualization.
+
+- plotly.express & plotly.graph_objects: For interactive visualizations and dashboard creation.
+
+- scipy.stats: For statistical tests (e.g., Chi-squared, as seen in the previous project analyzing-data-pandas).
+
+- warnings: For managing warnings during execution.
+
+## 9. How to Run the Project
+To set up the environment and run the analysis notebooks, follow these steps:
+
+### 1. Clone the repository:
+
+**Bash**
+git clone https://github.com/pedrito2626/wildlife-commerce.git
+cd wildlife-commerce
+
+### 2. Create a virtual environment (recommended):
+
+**Bash**
+python -m venv venv
+
+### 3. Activate the virtual environment:
+
+- On Windows:
+
+**Bash**
+.\venv\Scripts\activate
+
+- On macOS/Linux:
+
+**Bash**
+source venv/bin/activate
+
+### 4. Install dependencies:
+
+**Bash**
+pip install -r requirements.txt
+**Note: Ensure the requirements.txt contains all necessary libraries for this project (e.g., pandas, numpy, matplotlib, seaborn, plotly, scipy).**
+
+### 5. Run the Jupyter notebooks:
+
+**Bash**
+jupyter notebook
+
+This command will open the Jupyter interface in your web browser. From there, you can navigate to the notebooks/ directory and open 01_EDA.ipynb and 02_Graphics.ipynb to execute the analysis step-by-step.
